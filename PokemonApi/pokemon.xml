@@ -1,0 +1,120 @@
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://pokemon-api/pokemon-service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://pokemon-api/pokemon-service" name="PokemonService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://pokemon-api/pokemon-service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/PokemonApi.Dtos" />
+      <xs:element name="GetPokemonById">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="id" type="ser:guid" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPokemonByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="GetPokemonByIdResult" nillable="true" xmlns:q1="http://schemas.datacontract.org/2004/07/PokemonApi.Dtos" type="q1:PokemonResponseDto" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PokemonApi.Dtos" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/PokemonApi.Dtos" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:complexType name="PokemonResponseDto" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="Level" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Stats" nillable="true" xmlns:q1="http://pokemon-api/pokemon-service" type="q1:StatsDto" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PokemonResponseDto" nillable="true" type="tns:PokemonResponseDto" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://pokemon-api/pokemon-service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pokemon-api/pokemon-service" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:complexType name="StatsDto" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attack" type="xs:int" />
+          <xs:element minOccurs="0" name="Defense" type="xs:int" />
+          <xs:element minOccurs="0" name="Speed" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="StatsDto" nillable="true" type="tns:StatsDto" />
+    </xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="PokemonService_GetPokemonById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPokemonById" />
+  </wsdl:message>
+  <wsdl:message name="PokemonService_GetPokemonById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPokemonByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PokemonService">
+    <wsdl:operation name="GetPokemonById">
+      <wsdl:input wsam:Action="http://pokemon-api/pokemon-service/PokemonService/GetPokemonById" message="tns:PokemonService_GetPokemonById_InputMessage" />
+      <wsdl:output wsam:Action="http://pokemon-api/pokemon-service/PokemonService/GetPokemonByIdResponse" message="tns:PokemonService_GetPokemonById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_PokemonService" type="tns:PokemonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPokemonById">
+      <soap:operation soapAction="http://pokemon-api/pokemon-service/PokemonService/GetPokemonById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PokemonService">
+    <wsdl:port name="BasicHttpBinding_PokemonService" binding="tns:BasicHttpBinding_PokemonService">
+      <soap:address location="http://localhost:8081/PokemonService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
