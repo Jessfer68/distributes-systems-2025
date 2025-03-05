@@ -14,4 +14,7 @@ public interface IPokemonService
 
     [OperationContract]
     Task<PokemonResponseDto> CreatePokemon(CreatePokemonDto createPokemon, CancellationToken cancellationToken);
+
+    [OperationContract]
+    Task<PokemonResponseDto> UpdatePokemon(UpdatePokemonDto pokemon, CancellationToken cancellationToken);
 }
