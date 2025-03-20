@@ -1,4 +1,5 @@
 using PokedexApi.Dtos;
+using PokedexApi.Infrastructure.Soap.Dtos;
 using PokedexApi.Models;
 
 namespace PokedexApi.Mappers;
@@ -17,6 +18,18 @@ public static class PokemonMapper
                 Defense = pokemon.Defense,
                 Speed = pokemon.Speed
             }
+        };
+    }
+
+    public static Pokemon ToModel(this PokemonResponseDto pokemon) {
+        return new Pokemon {
+            Id = pokemon.Id,
+            Name = pokemon.Name,
+            Type = pokemon.Type,
+            Level = pokemon.Level,
+            Attack = pokemon.Stats.Attack,
+            Defense = pokemon.Stats.Defense,
+            Speed = pokemon.Stats.Speed
         };
     }
 }
