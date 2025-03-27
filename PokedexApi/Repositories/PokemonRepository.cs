@@ -2,6 +2,7 @@ using System.ServiceModel;
 using PokedexApi.Infrastructure.Soap.Contracts;
 using PokedexApi.Models;
 using PokedexApi.Mappers;
+using PokedexApi.Exceptions;
 
 namespace PokedexApi.Repositories;
 
@@ -43,6 +44,46 @@ public class PokemonRepository : IPokemonRepository {
         catch(Exception ex) 
         {
             _logger.LogError(ex, "Failed to delete pokemon with id: {id}", id);
+            throw;
+        }
+    }
+
+    public async Task<Pokemon> CreatePokemonAsync(Pokemon pokemon, CancellationToken cancellationToken) 
+    {
+        try
+        {
+            var pokemonCreated = await _pokemonService.CreatePokemon(pokemon.ToSoapDto(), cancellationToken);
+            return pokemonCreated.ToModel();
+        } 
+        catch(FaultException ex) when (ex.Message.Contains("Pokemon")) 
+        {
+            throw new PokemonValidationException(ex.Message);
+        }
+        catch(FaultException ex) 
+        {
+            _logger.LogError(ex, "Error creating pokemon");
+            throw;
+        }
+    }
+    
+    public async Task<IEnumerable<Pokemon>> GetPokemonByNameAsync(string name, CancellationToken cancellationToken) 
+    {
+        var pokemons = await _pokemonService.GetPokemonByName(name, cancellationToken);
+        return pokemons.Select(p => p.ToModel());
+    }
+
+    public async Task UpdatePokemonAsync(Pokemon pokemon, CancellationToken cancellationToken)
+    {
+        try 
+        {
+            await _pokemonService.UpdatePokemon(pokemon.ToUpdateSoapDto(), cancellationToken);
+        } catch(FaultException ex) when(ex.Message.Contains("Pokemon not found")) 
+        {
+            throw new PokemonNotFoundException();
+        } 
+        catch(FaultException ex) 
+        {
+            _logger.LogError(ex, "Error updating pokemon");
             throw;
         }
     }

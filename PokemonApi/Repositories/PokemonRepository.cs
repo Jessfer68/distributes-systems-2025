@@ -31,4 +31,9 @@ public class PokemonRepository : IPokemonRepository {
         _context.Pokemons.Update(pokemon.ToEntity());
         await _context.SaveChangesAsync(cancellationToken);
     }
+    
+    public async Task<IEnumerable<Pokemon>> GetPokemonByNameAsync(string name, CancellationToken cancellationToken) {
+        var pokemons = await _context.Pokemons.AsNoTracking().Where(s => s.Name.Contains(name)).ToListAsync(cancellationToken);
+        return pokemons.ToModel();
+    }
 }

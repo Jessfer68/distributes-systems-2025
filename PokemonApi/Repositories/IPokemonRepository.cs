@@ -9,4 +9,6 @@ public interface IPokemonRepository {
     Task AddAsync(Pokemon pokemon, CancellationToken cancellationToken);
 
     Task UpdateAsync(Pokemon pokemon, CancellationToken cancellationToken);
+
+    Task<IEnumerable<Pokemon>> GetPokemonByNameAsync(string name, CancellationToken cancellationToken);
 }

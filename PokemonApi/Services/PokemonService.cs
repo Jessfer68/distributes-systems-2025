@@ -57,4 +57,10 @@ public class PokemonService : IPokemonService
         await _pokemonRepository.UpdateAsync(pokemonToUpdate, cancellationToken);
         return pokemonToUpdate.ToDto();
     }
+
+    public async Task<IEnumerable<PokemonResponseDto>> GetPokemonByName(string name, CancellationToken cancellationToken) 
+    {
+        var pokemons = await _pokemonRepository.GetPokemonByNameAsync(name, cancellationToken);
+        return pokemons.ToDto();
+    }
 }

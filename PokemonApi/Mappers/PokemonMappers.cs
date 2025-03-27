@@ -66,4 +66,13 @@ public static class PokemonMapper {
             Speed = stats.Speed
         };
     }
+
+    public static IEnumerable<Pokemon> ToModel(this IEnumerable<PokemonEntity> pokemons) 
+    {
+        return pokemons.Select(s => s.ToModel()).ToList();
+    }
+    
+    public static IEnumerable<PokemonResponseDto> ToDto(this IEnumerable<Pokemon> pokemons) {
+        return pokemons.Select(s => s.ToDto()).ToList();
+    }
 }

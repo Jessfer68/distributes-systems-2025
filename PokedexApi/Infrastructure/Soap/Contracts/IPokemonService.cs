@@ -17,4 +17,7 @@ public interface IPokemonService
 
     [OperationContract]
     Task<PokemonResponseDto> UpdatePokemon(UpdatePokemonDto pokemon, CancellationToken cancellationToken);
+
+    [OperationContract]
+    Task<IEnumerable<PokemonResponseDto>> GetPokemonByName(string name, CancellationToken cancellationToken);
 }
