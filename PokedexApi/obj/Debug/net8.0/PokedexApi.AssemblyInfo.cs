@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokedexApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03b55d0e1f85783a4e68362f1a381c81c16af23a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0c91ceaeefcd4b135bbadf7fae7cc86ba490985")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokedexApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokedexApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

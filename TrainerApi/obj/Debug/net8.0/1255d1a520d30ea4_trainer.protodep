@@ -1,0 +1,3 @@
+obj/Debug/net8.0/Protos/Trainer.cs \
+obj/Debug/net8.0/Protos/TrainerGrpc.cs: /Users/jessfer/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/trainer.proto

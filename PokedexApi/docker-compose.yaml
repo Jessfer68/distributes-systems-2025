@@ -1,0 +1,65 @@
+﻿version: '3.8'
+
+services:
+  pokedex-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8088:8080"
+    depends_on:
+      - hydra-admin
+      - hydra-public
+    environment:
+      - Authentication__Authority=http://hydra-public:4444
+      - Authentication_Issues=http://hydra-public:4444
+        
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: hydra
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: hydra
+    ports:
+      - "5432:5432"
+    volumes:
+      - hydra-data:/var/lib/postgresql/data
+  
+  hydra-migrate:
+    image: oryd/hydra:v2.2
+    depends_on:
+      - postgres
+    environment:
+      - DSN=postgres://hydra:secret@postgres:5432/hydra?sslmode=disable
+    command: migrate sql -e --yes
+    
+  hydra-admin:
+    image: oryd/hydra:v2.2
+    depends_on:
+      - hydra-migrate
+    environment:
+      - DSN=postgres://hydra:secret@postgres:5432/hydra?sslmode=disable
+      - URLS_SELF_ISSUER=http://hydra-public:4444
+      - SECRETS_SYSTEM=thiisaverysecretkey123
+    command: serve admin --dev
+    ports:
+      - "4445:4445"
+  
+  hydra-public:
+    image: oryd/hydra:v2.2
+    depends_on:
+      - hydra-migrate
+    environment:
+      - DSN=postgres://hydra:secret@postgres:5432/hydra?sslmode=disable
+      - URLS_SELF_ISSUER=http://hydra-public:4444
+      - SECRETS_SYSTEM=thiisaverysecretkey123
+    command: serve public --dev
+    ports:
+      - "4444:4444"
+
+networks:
+  default:
+    name: "hydra-net"
+volumes:
+  hydra-data:
+    

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9679ng8dex18aS296+cTdfUFo3eRFVblgotqoGrOpXzQDZRusZB5Per2iCU6LN22YXbMdnnELCl/LAspxXZV7g==",
+  "dgSpecHash": "1rdh8d7FgJg=",
   "success": true,
   "projectFilePath": "/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/PokedexApi.csproj",
   "expectedPackageFiles": [
+    "/Users/jessfer/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.8/microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.aspnetcore.connections.abstractions/6.0.27/microsoft.aspnetcore.connections.abstractions.6.0.27.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.1.1/microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.aspnetcore.http.features/2.1.1/microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
@@ -13,6 +14,12 @@
     "/Users/jessfer/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.extensions.features/6.0.27/microsoft.extensions.features.6.0.27.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.extensions.primitives/2.1.1/microsoft.extensions.primitives.2.1.1.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.abstractions/7.1.2/microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.1.2/microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.logging/7.1.2/microsoft.identitymodel.logging.7.1.2.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.net.http.headers/2.1.1/microsoft.net.http.headers.2.1.1.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.netcore.platforms/3.1.9/microsoft.netcore.platforms.3.1.9.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
@@ -25,6 +32,7 @@
     "/Users/jessfer/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.drawing.common/4.7.3/system.drawing.common.4.7.3.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.memory/4.5.1/system.memory.4.5.1.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -40,7 +48,10 @@
     "/Users/jessfer/.nuget/packages/system.servicemodel.http/4.8.1/system.servicemodel.http.4.8.1.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.servicemodel.primitives/4.8.1/system.servicemodel.primitives.4.8.1.nupkg.sha512",
     "/Users/jessfer/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
-    "/Users/jessfer/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
+    "/Users/jessfer/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/jessfer/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.11/microsoft.netcore.app.host.osx-arm64.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }

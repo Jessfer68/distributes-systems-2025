@@ -26,7 +26,6 @@
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.PokedexApi.props
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/scopedcss/bundle/PokedexApi.styles.css
-/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/PokedexApi.csproj.CopyComplete
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/PokedexApi.dll
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/refint/PokedexApi.dll
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/PokedexApi.pdb
@@ -46,3 +45,15 @@
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/PokedexApi.staticwebassets.endpoints.json
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/staticwebassets/msbuild.PokedexApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/PokedexApi/obj/Debug/net8.0/PokedexApi.csproj.Up2Date
