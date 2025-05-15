@@ -33,3 +33,9 @@
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/obj/Debug/net8.0/TrainerApi.pdb
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/obj/Debug/net8.0/TrainerApi.genruntimeconfig.cache
 /Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/obj/Debug/net8.0/ref/TrainerApi.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/DnsClient.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/SharpCompress.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/Snappier.dll
+/Users/jessfer/Documents/UAQ/Sistemas Distribuidos/Distribuidos2025.1/projects/TrainerApi/bin/Debug/net8.0/ZstdSharp.dll

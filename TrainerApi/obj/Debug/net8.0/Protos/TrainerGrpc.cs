@@ -49,6 +49,10 @@ namespace TrainerApi {
     static readonly grpc::Marshaller<global::TrainerApi.TrainerByIdRequest> __Marshaller_trainerpb_TrainerByIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrainerApi.TrainerByIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrainerApi.TrainerResponse> __Marshaller_trainerpb_TrainerResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrainerApi.TrainerResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrainerApi.CreateTrainerRequest> __Marshaller_trainerpb_CreateTrainerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrainerApi.CreateTrainerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrainerApi.CreateTrainersResponse> __Marshaller_trainerpb_CreateTrainersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrainerApi.CreateTrainersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse> __Method_GetTrainer = new grpc::Method<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse>(
@@ -59,12 +63,12 @@ namespace TrainerApi {
         __Marshaller_trainerpb_TrainerResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse> __Method_GetTrainerByName = new grpc::Method<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse>(
-        grpc::MethodType.Unary,
+    static readonly grpc::Method<global::TrainerApi.CreateTrainerRequest, global::TrainerApi.CreateTrainersResponse> __Method_CreateTrainer = new grpc::Method<global::TrainerApi.CreateTrainerRequest, global::TrainerApi.CreateTrainersResponse>(
+        grpc::MethodType.ClientStreaming,
         __ServiceName,
-        "GetTrainerByName",
-        __Marshaller_trainerpb_TrainerByIdRequest,
-        __Marshaller_trainerpb_TrainerResponse);
+        "CreateTrainer",
+        __Marshaller_trainerpb_CreateTrainerRequest,
+        __Marshaller_trainerpb_CreateTrainersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -88,14 +92,8 @@ namespace TrainerApi {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      ///Unary call 
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::TrainerApi.TrainerResponse> GetTrainerByName(global::TrainerApi.TrainerByIdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::TrainerApi.CreateTrainersResponse> CreateTrainer(grpc::IAsyncStreamReader<global::TrainerApi.CreateTrainerRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -109,7 +107,7 @@ namespace TrainerApi {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetTrainer, serviceImpl.GetTrainer)
-          .AddMethod(__Method_GetTrainerByName, serviceImpl.GetTrainerByName).Build();
+          .AddMethod(__Method_CreateTrainer, serviceImpl.CreateTrainer).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -120,7 +118,7 @@ namespace TrainerApi {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TrainerServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetTrainer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse>(serviceImpl.GetTrainer));
-      serviceBinder.AddMethod(__Method_GetTrainerByName, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrainerApi.TrainerByIdRequest, global::TrainerApi.TrainerResponse>(serviceImpl.GetTrainerByName));
+      serviceBinder.AddMethod(__Method_CreateTrainer, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::TrainerApi.CreateTrainerRequest, global::TrainerApi.CreateTrainersResponse>(serviceImpl.CreateTrainer));
     }
 
   }
